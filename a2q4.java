@@ -76,7 +76,7 @@ public class a2q4 extends Application {
 			Label stateLabel = new Label("Select Your State");
 			ComboBox<String> stateComboBox = new ComboBox<>();
 			stateComboBox.setPrefWidth(130);
-			stateComboBox.getItems().addAll("Karnataka","Assam", "Bihar");
+			stateComboBox.getItems().addAll("Karnataka","Assam", "Bihar","Maharashtra","Gujarat");
 			
 			
 			HBox stateBox =new HBox();
