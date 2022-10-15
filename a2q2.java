@@ -2,7 +2,8 @@ package application;
 
 import javafx.application.Application;  
 import javafx.scene.Scene;  
-import javafx.scene.control.*;  
+import javafx.scene.control.*;
+import javafx.scene.input.KeyCombination;
 import javafx.scene.layout.BorderPane;  
 import javafx.stage.Stage;  
 public class a2q2 extends Application {  
@@ -19,29 +20,39 @@ public class a2q2 extends Application {
         
         Menu FileMenu = new Menu("File"); 
         
-        MenuItem filemenu1 = new MenuItem("New");  
-        MenuItem filemenu2 = new MenuItem("Open");  
-        MenuItem filemenu3 = new MenuItem("Save");
+        MenuItem fnew = new MenuItem("New");  
+        MenuItem fopen = new MenuItem("Open");  
+        MenuItem fsave = new MenuItem("Save");
+        
+        FileMenu.setMnemonicParsing(true);
         
         Menu EditMenu = new Menu("Edit"); 
         
-        MenuItem EditMenu1 = new MenuItem("Cut");  
-        MenuItem EditMenu2 = new MenuItem("Copy");  
-        MenuItem EditMenu3 = new MenuItem("Paste");  
+        MenuItem ecut = new MenuItem("Cut");  
+        MenuItem ecopy = new MenuItem("Copy");  
+        MenuItem epaste = new MenuItem("Paste");  
         
+        EditMenu.setMnemonicParsing(true);
         
         Menu HelpMenu = new Menu("Help");
         MenuItem helpmenu1 = new MenuItem("Help Centre");  
         MenuItem helpmenu2 = new MenuItem("About Us");  
        
+        HelpMenu.setMnemonicParsing(true);
         
+        fnew.setAccelerator(KeyCombination.keyCombination("shortcut+n"));
+		fopen.setAccelerator(KeyCombination.keyCombination("shortcut+o"));
+		fsave.setAccelerator(KeyCombination.keyCombination("shortcut+s"));
+		ecut.setAccelerator(KeyCombination.keyCombination("shortcut+x"));
+		ecopy.setAccelerator(KeyCombination.keyCombination("shortcut+c"));
+		epaste.setAccelerator(KeyCombination.keyCombination("shortcut+v"));
         
         
         root.setTop(menubar);  
         
-        EditMenu.getItems().addAll(EditMenu1,EditMenu2,EditMenu3);  
+        EditMenu.getItems().addAll(ecut,ecopy,epaste);  
         
-        FileMenu.getItems().addAll(filemenu1,filemenu2,filemenu3); 
+        FileMenu.getItems().addAll(fnew,fopen,fsave); 
         
         HelpMenu.getItems().addAll(helpmenu1, helpmenu2 );
         
