@@ -18,7 +18,7 @@ public class a2q2 extends Application {
         Scene scene = new Scene(root,300,300);  
         MenuBar menubar = new MenuBar();  
         
-        Menu FileMenu = new Menu("File"); 
+        Menu FileMenu = new Menu("_File"); 
         
         MenuItem fnew = new MenuItem("New");  
         MenuItem fopen = new MenuItem("Open");  
@@ -26,7 +26,7 @@ public class a2q2 extends Application {
         
         FileMenu.setMnemonicParsing(true);
         
-        Menu EditMenu = new Menu("Edit"); 
+        Menu EditMenu = new Menu("_Edit"); 
         
         MenuItem ecut = new MenuItem("Cut");  
         MenuItem ecopy = new MenuItem("Copy");  
@@ -34,7 +34,7 @@ public class a2q2 extends Application {
         
         EditMenu.setMnemonicParsing(true);
         
-        Menu HelpMenu = new Menu("Help");
+        Menu HelpMenu = new Menu("_Help");
         MenuItem helpmenu1 = new MenuItem("Help Centre");  
         MenuItem helpmenu2 = new MenuItem("About Us");  
        
